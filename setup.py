@@ -2,7 +2,7 @@
 
 """The setup script."""
 
-from setuptools import setup
+from setuptools import find_packages, setup
 
 with open('requirements.txt') as f:
     install_requires = f.read().strip().split('\n')
@@ -32,7 +32,7 @@ setup(
     maintainer_email='abanihi@ucar.edu',
     classifiers=CLASSIFIERS,
     url='https://github.com/NCAR/esmcol-validator',
-    packages=['esmcol_validator'],
+    packages=find_packages(exclude=('tests',)),
     include_package_data=True,
     install_requires=install_requires,
     license='Apache 2.0',
