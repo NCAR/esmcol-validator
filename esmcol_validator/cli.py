@@ -15,6 +15,9 @@ from .validator import EsmcolValidate
 @click.option('--timer', default=False, show_default=True, is_flag=True)
 @click.option('--log-level', default='CRITICAL', show_default=True)
 def main(esmcol_file, esmcol_spec_dirs, version, verbose, timer, log_level):
+    """
+    A utility that allows users to validate esm-collection json files against the esm-collection-spec.
+    """
     if timer:
         start = default_timer()
     esmcol = EsmcolValidate(esmcol_file, esmcol_spec_dirs, version, log_level)
