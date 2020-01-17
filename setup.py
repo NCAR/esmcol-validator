@@ -31,7 +31,7 @@ setup(
     maintainer='Anderson Banihirwe',
     maintainer_email='abanihi@ucar.edu',
     classifiers=CLASSIFIERS,
-    url='https://github.com/NCAR/esm-collection-spec',
+    url='https://github.com/NCAR/esmcol-validator',
     packages=['esmcol_validator'],
     include_package_data=True,
     install_requires=install_requires,
