@@ -54,13 +54,13 @@ Example:
 
 ```bash
 $ esmcol-validator sample-pangeo-cmip6-collection.json
-{'collections': {'valid': 1, 'invalid': 0}, 'catalog_files': {'valid': 1, 'invalid': 0}, 'unknown': 0}
+{'collections': {'valid': 1, 'invalid': 0}, 'catalogs': {'valid': 1, 'invalid': 0}, 'unknown': 0}
 {
     "collections": {
         "valid": 1,
         "invalid": 0
     },
-    "catalog_files": {
+    "catalogs": {
         "valid": 1,
         "invalid": 0
     },

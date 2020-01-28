@@ -1,7 +1,7 @@
 codecov:
   max_report_age: off
 
-comment: false
+# comment: false
 
 coverage:
   precision: 2
