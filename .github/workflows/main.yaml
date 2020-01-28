@@ -40,7 +40,9 @@ jobs:
           pytest --junitxml=test-reports/junit.xml --cov=./ --verbose
 
       - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v1
+        uses: codecov/codecov-action@v1.0.5
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           file: test-reports/junit.xml
+          yml: ./codecov.yml
+          flags: ${{ matrix.python-version }}
