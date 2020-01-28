@@ -11,7 +11,7 @@ from .validator import EsmcolValidate
 @click.argument('esmcol_file')
 @click.option('--esmcol-spec-dirs', default=None, show_default=True)
 @click.option('--version', default='master', show_default=True)
-@click.option('--verbose', default=False, show_default=True, is_flag=True)
+@click.option('--verbose/--no-verbose', default=False, show_default=True, is_flag=True)
 @click.option('--timer', default=False, show_default=True, is_flag=True)
 @click.option('--log-level', default='CRITICAL', show_default=True)
 def main(esmcol_file, esmcol_spec_dirs, version, verbose, timer, log_level):
