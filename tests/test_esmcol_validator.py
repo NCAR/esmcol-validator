@@ -17,7 +17,7 @@ def test_good_collection_local():
     esmcol = _run_validate(os.path.join(here, 'test_data/good_collection.json'))
     expected = {
         'collections': {'valid': 1, 'invalid': 0},
-        'catalog_files': {'valid': 1, 'invalid': 0},
+        'catalogs': {'valid': 1, 'invalid': 0},
         'unknown': 0,
     }
     assert esmcol.status == expected
@@ -33,7 +33,7 @@ def test_bad_spec():
 
 def test_bad_catalog_file():
     esmcol = _run_validate(os.path.join(here, 'test_data/bad_collection.json'))
-    assert esmcol.status['catalog_files']['invalid'] == 1
+    assert esmcol.status['catalogs']['invalid'] == 1
 
 
 def test_catalog_file_not_found():
@@ -42,7 +42,23 @@ def test_catalog_file_not_found():
     )
     expected = {
         'collections': {'valid': 1, 'invalid': 0},
-        'catalog_files': {'valid': 0, 'invalid': 1},
+        'catalogs': {'valid': 0, 'invalid': 1},
+        'unknown': 0,
+    }
+    assert esmcol.status == expected
+
+
+@pytest.mark.parametrize(
+    'collection',
+    ['test_data/good_collection.json', 'test_data/simple_collection_with_catalog_dict.json'],
+)
+def test_spec_dir(collection):
+    url = os.path.join(here, collection)
+    spec_dir = os.path.join(here, 'spec-dir/json-schema')
+    esmcol = _run_validate(url, esmcol_spec_dirs=spec_dir)
+    expected = {
+        'collections': {'valid': 1, 'invalid': 0},
+        'catalogs': {'valid': 1, 'invalid': 0},
         'unknown': 0,
     }
     assert esmcol.status == expected
