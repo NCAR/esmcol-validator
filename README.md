@@ -1,6 +1,7 @@
 [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/NCAR/esmcol-validator/CI?logo=Github&style=for-the-badge)](https://github.com/NCAR/esmcol-validator/actions)
 [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/NCAR/esmcol-validator/code-style?label=Code%20Style&logo=GitHub&style=for-the-badge)](https://github.com/NCAR/esmcol-validator/actions)
 [![PyPI](https://img.shields.io/pypi/v/esmcol-validator?logo=PyPI&style=for-the-badge)](https://pypi.org/project/esmcol-validator)
+[![Conda](https://img.shields.io/conda/v/conda-forge/esmcol-validator?label=conda-forge&style=for-the-badge)](https://anaconda.org/conda-forge/esmcol-validator)
 [![](https://img.shields.io/codecov/c/github/NCAR/esmcol-validator.svg?style=for-the-badge)](https://codecov.io/gh/NCAR/esmcol-validator)
 
 # Earth System Model (ESM)Collection specification Validator
